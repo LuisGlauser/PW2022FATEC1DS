@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+  
+</head>
+<body>
+    <H1 >Exemplos de como trabalhar com DOM</H1>
+    <br>
+    <h2>.getElementById</h2>
+    <p>Esse codigo pega elementos especificos pelo ID, no exemplo abaixo a palavra é colorida por que possui o Id Cor</p>
+    <h4 id="Cor">Carro</h4>
+    <br>
+
+    <h2>.document.getElementsByTagName();</h2>
+    <p>esse codigo pega elementos baseado nas suas tags, por exemplo:</p>
+    <p>Uma Lista não ordenada:</p>
+        <ul>
+            <li>Café</li>
+            <li>Chá</li>
+            <li>Leite</li>
+        </ul>
+    <p>O innerHTML do segundo elemento de li é:</p>
+    <p id="Tegui"></p>
+    
+    <h2> .document.getElementsByClassName();</h2>
+    <p>esse codigo pega os elementos baseado em suas classes, por exemplo muda o texto da primeira palavra com a class="exemplo"</p>
+    
+    <div class="exemplo">Element1</div>
+    <div class="exemplo">Element2</div>]
+
+    <h2> .document.querySelector();</h2>
+    <p>esse codigo seleciona alguma tag especifica, exemplo coloca um Background color na class="exemplo2":</p>
+
+    <p class="exemplo2">Eu sou um P.</p>
+    <p class="exemplo2">Eu sou um P.</p> 
+
+    <h2> .document.querySelectorAll();</h2>
+    <p>Este altera todos os arquivos com a class="exemplo3"</p>
+
+    <h3 class="exemplo3">Um h3</h3>
+    <p class="exemplo3">Um P.</p> 
+
+    <script>
+        const nodeList = document.querySelectorAll(".exemplo3");
+        for (let i = 0; i < nodeList.length; i++) {
+        nodeList[i].style.backgroundColor = "red";
+        }
+        document.querySelector(".exemplo2").style.backgroundColor = "red";
+
+        const myElement = document.getElementById("Cor"); 
+myElement.style.color = "red";
+
+        const collection = document.getElementsByTagName("li");
+document.getElementById("Tegui").innerHTML = collection[1].innerHTML;
+
+        const collect = document.getElementsByClassName("exemplo");
+collect[0].innerHTML = "Olá Mundo!";
+    </script>
+</body>
+</html>
