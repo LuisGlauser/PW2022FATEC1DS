@@ -2,23 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 5</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+        let bt = document.getElementsByTagName("button");
+
+        bt[3].onclick = function(){
+            alert('Direto')
+        }
+            bt[4].addEventListener( "click" , Chama(z));
+            
+    }
+        //função nomeada
+        function Francisco(){
+            alert("Função nomeada")
+
+        }
+
+        // função construtor
+        let Fc = new Function('alert("construtor")'); 
+    
+        //Arrow Function
+        let Flecha = () => {
+            alert("Flecha") 
+        }
+    </script>
 </head>
 <body>
-    <h2>Função de Flecha(Arrow function)</h2>
-    <p>A Função Flecha nos permite encurtar syntaxes de funcoes, exemplo:</p>
-    <p>Ao invés de usar:
-        <br>
-        hello = function() {<br>
-            return "Hello World!";<br>
-          }
-          <br>
-        você pode encurtar usando: <br>
-        hello = () => { <br>
-            return "Hello World!"; <br>
-          }
-    </p>
+    <button onclick="Francisco()">Func. Nomeada</button>
+    <button onclick="Fc()">Func. Construtor</button>
+    <button onmouseover="Flecha()">Func. Flecha</button>
+
+    <button >Func. Direto</button>
+    <button >Func. AddEvent</button>
+
 </body>
 </html>
